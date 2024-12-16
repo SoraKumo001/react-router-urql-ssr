@@ -1,0 +1,49 @@
+{
+  "name": "react-router-urql-ssr",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build && node vercel/prepare.js",
+    "dev": "cross-env NODE_ENV=development node ./dev-server.js",
+    "typecheck": "react-router typegen && tsc",
+    "dev:codegen": "graphql-codegen --config codegen.ts",
+    "dev:query": "graphql-auto-query https://graphqlpokemon.favware.tech/v8 -d 1 -o app/gql/query.graphql"
+  },
+  "dependencies": {
+    "@react-libraries/next-exchange-ssr": "^1.0.7",
+    "@react-router/express": "^7.0.2",
+    "@react-router/fs-routes": "^7.0.2",
+    "@react-router/node": "^7.0.2",
+    "@vercel/node": "^5.0.0",
+    "express": "^4.21.2",
+    "graphql-tag": "^2.12.6",
+    "isbot": "^5.1.17",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.0.2",
+    "urql": "^4.2.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.3",
+    "@graphql-codegen/client-preset": "4.5.1",
+    "@graphql-codegen/typescript-urql": "^4.0.0",
+    "@react-router/dev": "^7.0.2",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "graphql-auto-query": "^1.0.4",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SoraKumo001/react-router-urql-ssr",
+  "author": "SoraKumo <info@croud.jp>",
+  "license": "MIT"
+}
